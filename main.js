@@ -19,7 +19,7 @@ class News{
               
               <div class="text-center ">
               <p class="card-text ">${this.date}.</p>
-              <a href="${this.url}" class="btn btn-dark ">Read More</a>
+              <a href="${this.url}" class="btn btn-dark " target="_blank">Read More</a>
               </div>
             </div>
           </div>`
@@ -29,6 +29,8 @@ class News{
 
   function openNews(){
       let keyNews= document.querySelector('input').value
+      
+    //   window.location.reload();//reload um das vorherige zu entfernen 
       console.log(keyNews)
     fetch(`http://newsapi.org/v2/everything?q=${keyNews}&from=2021-09-07&to=2021-09-07&sortBy=popularity&apiKey=f967be664c7c427390facab3403a4a94`)
         .then(response => response.json())
