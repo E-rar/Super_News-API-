@@ -30,7 +30,7 @@ class News{
   function openNews(){
       let keyNews= document.querySelector('input').value
       console.log(keyNews)
-    fetch(`https://newsapi.org/v2/everything?q=${keyNews}&from=2021-09-07&to=2021-09-07&sortBy=popularity&apiKey=f967be664c7c427390facab3403a4a94`)
+    fetch(`http://newsapi.org/v2/everything?q=${keyNews}&from=2021-09-07&to=2021-09-07&sortBy=popularity&apiKey=f967be664c7c427390facab3403a4a94`)
         .then(response => response.json())
         .then(data => {
             console.log(data)
